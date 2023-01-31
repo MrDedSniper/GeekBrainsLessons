@@ -41,16 +41,25 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BasaSystem\FloorColor.cs" />
-     <Compile Include="Assets\Scripts\BasaSystem\PickupObject.cs" />
-     <Compile Include="Assets\Scripts\BasaSystem\CameraBehavior.cs" />
+     <Compile Include="Assets\Scripts\BaseSystem\GameBehavior.cs" />
+     <Compile Include="Assets\Scripts\BaseSystem\Utilities.cs" />
+     <Compile Include="Assets\Scripts\ItemsBehavior\DeathPoint.cs" />
+     <Compile Include="Assets\Scripts\BaseSystem\CameraBehavior.cs" />
      <Compile Include="Assets\Scripts\PlayersControl\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\PlayersControl\Player2Movement.cs" />
+     <Compile Include="Assets\Scripts\BaseSystem\CustomExtensions.cs" />
+     <Compile Include="Assets\Scripts\ItemsBehavior\StarItems.cs" />
+     <Compile Include="Assets\Scripts\ItemsBehavior\PickUpItem.cs" />
+     <Compile Include="Assets\Scripts\ItemsBehavior\ShieldBonus.cs" />
+     <Compile Include="Assets\Scripts\PlayersControl\BonusSystem.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\Scripts" />
+     <Folder Include="Assets\Animation" />
      <Folder Include="Assets\Scripts\PlayersControl" />
-     <Folder Include="Assets\Scripts\BasaSystem" />
+     <Folder Include="Assets\Prefabs\Shield" />
+     <Folder Include="Assets\Prefabs\Shield\Materials" />
+     <Folder Include="Assets\Scripts\ItemsBehavior" />
+     <Folder Include="Assets\Scripts\BaseSystem" />
      <Folder Include="Assets\Material" />
      <Folder Include="Assets\Scenes" />
      <Reference Include="UnityEngine">

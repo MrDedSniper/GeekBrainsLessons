@@ -1,36 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace PlayersControl
 {
     public class PlayerMovement : MonoBehaviour
     {
-        private Vector3 _direction;
+        private Rigidbody _rigidbody;
 
-        private float vInput;
-        private float hInput;
-
-        private Animator _animator;
-
-        public float moveSpeed = 10f;
-        public float strafeSpeed = 8f;
-        public float rotateSpeed = 10f;
+        public float moveSpeed;
 
         private void Awake()
         {
-            _animator = GetComponent<Animator>();
+            _rigidbody = GetComponent<Rigidbody>();
+            moveSpeed = 15f;
         }
 
-        void Update()
+        private void FixedUpdate()
         {
-            var speed = _direction * moveSpeed * Time.deltaTime;
+           if (Input.GetKey (KeyCode.W)) _rigidbody.AddForce(0f, 0f, 1f * moveSpeed);
+           if (Input.GetKey (KeyCode.S)) _rigidbody.AddForce(0f, 0f, -1f * moveSpeed);
+           if (Input.GetKey (KeyCode.D)) _rigidbody.AddForce(1f * moveSpeed, 0f, 0f);
+           if (Input.GetKey (KeyCode.A)) _rigidbody.AddForce(-1f * moveSpeed, 0f, 0f);
 
-            _direction.x = Input.GetAxis("Horizontal");
-            _direction.z = Input.GetAxis("Vertical");
-
-            transform.Translate(speed);
-            transform.Rotate(Vector3.up * rotateSpeed * Input.GetAxis("Mouse X"));
         }
     }
 }
