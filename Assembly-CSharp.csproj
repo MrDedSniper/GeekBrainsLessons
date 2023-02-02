@@ -41,16 +41,16 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\PlayersControl\BonusSystem.cs" />
      <Compile Include="Assets\Scripts\BaseSystem\GameBehavior.cs" />
      <Compile Include="Assets\Scripts\BaseSystem\Utilities.cs" />
      <Compile Include="Assets\Scripts\ItemsBehavior\DeathPoint.cs" />
      <Compile Include="Assets\Scripts\BaseSystem\CameraBehavior.cs" />
+     <Compile Include="Assets\Scripts\ItemsBehavior\ShieldBonus.cs" />
      <Compile Include="Assets\Scripts\PlayersControl\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\BaseSystem\CustomExtensions.cs" />
      <Compile Include="Assets\Scripts\ItemsBehavior\StarItems.cs" />
      <Compile Include="Assets\Scripts\ItemsBehavior\PickUpItem.cs" />
-     <Compile Include="Assets\Scripts\ItemsBehavior\ShieldBonus.cs" />
-     <Compile Include="Assets\Scripts\PlayersControl\BonusSystem.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\Scripts" />
