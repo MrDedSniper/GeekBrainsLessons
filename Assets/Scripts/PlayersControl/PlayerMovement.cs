@@ -9,12 +9,24 @@ namespace PlayersControl
     public class PlayerMovement : MonoBehaviour
     {
         private Rigidbody _rigidbody;
+        private Animator _animator;
 
         public float moveSpeed;
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody>();
+            
+            try
+            {
+                _animator = GetComponent<Animator>();
+            }
+            catch (Exception e)
+            {
+                Debug.Log($"No Animator: {e.Message}");
+                throw;
+            }
+
             moveSpeed = 15f;
         }
 
