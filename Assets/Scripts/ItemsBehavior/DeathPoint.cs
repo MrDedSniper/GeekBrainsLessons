@@ -10,13 +10,6 @@ namespace ItemsBehavior
 
         public bool showLossScreen = false;
 
-        private Delegate _shockCameraDelegate;
-
-        private void Start()
-        {
-            _shockCameraDelegate = DelegateCamera;
-        }
-
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.name == "Player")
@@ -29,16 +22,10 @@ namespace ItemsBehavior
                 else
                 {
                     showLossScreen = true;
-                    DelegateCamera();
                     Time.timeScale = 0f;
                     Utilities.RestartLevel();
                 }
             }
-        }
-
-        private static void DelegateCamera()
-        {
-            BaseSystem.CameraBehavior.CameraShake();
         }
 
         private void OnGUI()

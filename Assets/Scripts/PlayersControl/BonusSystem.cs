@@ -13,7 +13,16 @@ namespace PlayersControl
         
         private void Awake()
         {
-            _speedBonus = GetComponent<PlayerMovement>();
+            try
+            {
+                _speedBonus = GetComponent<PlayerMovement>();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
             isSpeed = false;
             isShielded = false;
         }

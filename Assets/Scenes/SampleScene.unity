@@ -43456,7 +43456,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7011e4ebdc0cc4088ad0f43f4f6efa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camOffset: {x: 0, y: 0, z: 0}
 --- !u!95 &7470472581792657248
 Animator:
   serializedVersion: 5

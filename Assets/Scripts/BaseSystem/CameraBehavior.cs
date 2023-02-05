@@ -27,7 +27,7 @@ namespace BaseSystem
 
         public static void CameraShake()
         {
-            _animator.SetTrigger("BombBlow");
+            _animator.SetTrigger("GetItem");
         }
     }
 }
