@@ -17,8 +17,6 @@ public static class Utilities
     {
         SceneManager.LoadScene(0);
         Time.timeScale = 1.0f;
-        string message = UpdateDeathCount(ref playerDeaths);
-        
     }
 
     public static bool RestartLevel(int sceneIndex)
@@ -27,5 +25,10 @@ public static class Utilities
         Time.timeScale = 1.0f;
 
         return true;
+    }
+
+    public static void PlusDeathCount()
+    {
+        string message = UpdateDeathCount(ref playerDeaths);
     }
 }
