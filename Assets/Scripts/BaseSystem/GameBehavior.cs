@@ -20,6 +20,7 @@ namespace BaseSystem
         public int maxItems = 5;
 
         private int _itemsCollected = 0;
+        public static int starsStatistic = 0;
 
         public int Items
         {
@@ -45,6 +46,12 @@ namespace BaseSystem
             FindObjectOfType<BaseSystem.GameBehavior>().showLossScreen.SetActive(false);
             FindObjectOfType<BaseSystem.GameBehavior>().showWinScreen.SetActive(false);
         }
+
+        private void Update()
+        {
+            starsStatistic = Items;
+        }
+
         private void FixedUpdate()
         {
             if (Input.GetKey (KeyCode.Escape)) Utilities.RestartLevel();
