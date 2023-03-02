@@ -6,6 +6,7 @@ public class SaveLoad : MonoBehaviour
 {
     public Transform CurrentPlayerPosition;
     public int StarsCollected = BaseSystem.GameBehavior.starsStatistic;
+    public static int totalDeaths = 0;
 
     void Update ()
     {
@@ -39,6 +40,8 @@ public class SaveLoad : MonoBehaviour
         PlayerPrefs.SetFloat("PosZ", CurrentPlayerPosition.position.z);
         
         PlayerPrefs.SetInt("StarsGet", StarsCollected);
+        
+        PlayerPrefs.SetInt("Total Deaths", totalDeaths);
     }
 	
     public void loadInfo()
@@ -51,5 +54,7 @@ public class SaveLoad : MonoBehaviour
         CurrentPlayerPosition.position = PlayerPosition;
         
         GameObject.Find("GameController").GetComponent<BaseSystem.GameBehavior>().Items += StarsCollected;
+
+        Utilities.playerDeaths = totalDeaths;
     }
 }

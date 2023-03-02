@@ -30,5 +30,6 @@ public static class Utilities
     public static void PlusDeathCount()
     {
         string message = UpdateDeathCount(ref playerDeaths);
+        SaveLoad.totalDeaths++;
     }
 }
